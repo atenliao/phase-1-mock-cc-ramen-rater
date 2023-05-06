@@ -68,33 +68,8 @@ function getAllPhoto(){
     })
 }
 
-function getPreviousPhoto(i){
-    let len = ImageIndex.length -1
-    if(i === -1){
-        ImageDetail.src = ImageIndex[len].image
-        ImageName.textContent = ImageIndex[len].name;
-        ImageRestaurant.textContent = ImageIndex[len].restaurant
-        ImageRating.textContent = ImageIndex[len].rating
-        ImageComment.textContent =ImageIndex[len].comment
-    }else if( ImageIndex[i] === 'empty'){
-        ImageDetail.src = ImageIndex[0].image
-        ImageName.textContent = ImageIndex[0].name;
-        ImageRestaurant.textContent = ImageIndex[0].restaurant
-        ImageRating.textContent = ImageIndex[0].rating
-        ImageComment.textContent =ImageIndex[0].comment
-    }
-    else{
-        ImageDetail.src = ImageIndex[i].image
-        ImageName.textContent = ImageIndex[i].name;
-        ImageRestaurant.textContent = ImageIndex[i].restaurant
-        ImageRating.textContent = ImageIndex[i].rating
-        ImageComment.textContent =ImageIndex[i].comment
-    }
-    
-}
 
 function DeletePhoto(){
-    // ImageId = photo.id
     ImageDetail.src = "./assets/image-placeholder.jpg"
     ImageName.textContent = 'Insert photo name';
     ImageRestaurant.textContent = 'Insert photo restaurant'
